@@ -1,0 +1,264 @@
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .container {
+    padding: 10px;
+  }
+} 
+ body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: grey;
+    min-height: 100vh;
+}
+h1{
+    color: rgb(0, 0, 0);
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 20px;
+    font-size: 150%;
+    padding-left: 10px;
+    filter: drop-shadow(0 0 0.75rem gold);
+    cursor: default;
+    color: gold;
+    transition: 2s;
+    animation: glow 1s infinite alternate-reverse;
+    
+}
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 20px gold, 0 0 40px gold;
+    }
+    to {
+        text-shadow: 0 0 10px gray, 0 0 20px gray, 0 0 30px gray, 0 0 50px gray;
+    }
+}
+.Navbars{
+    display: flex;
+    padding: 10px;
+}
+.links{
+    list-style-type: none;
+    margin: 0 15px;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+.links a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    gap: 30px;
+    background-color: gold;
+    border-radius: 20px;
+    padding: 10px 20px;
+    box-shadow: 0 0 20px gold;
+}
+.links a:hover{
+    background-color: gray;
+    color: gold;
+    box-shadow: 0 0 20px gray;
+    transition: 0.5s;
+    animation: glow 1s infinite alternate;
+}
+.links li:hover{
+    animation: pulse 2s infinite ;
+}
+@keyframes pulse {
+    0% { transform: scale(1);}     
+    50% { transform: scale(1.1);} 
+    100%{transform: scale(1);}  
+}
+.container{
+    display: flex;
+    flex-direction: column;
+
+}
+.container .Box1 h2{
+    color: #000000;
+    filter: drop-shadow(0 0 20px gold);
+    cursor: default;
+    justify-content: center;
+    display: flex;
+}
+.container .Box1 p{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+     color: gold;
+    box-shadow: 0 0 20px gray;
+    justify-content: center;
+    display: flex;
+}
+
+.info-box{
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+.info-box .Hobbies h2{    
+    color: black;
+    filter: drop-shadow(0 0 0.75rem gold);
+    cursor: default; 
+   margin: 20px;
+}
+.info-box .Hobbies ul{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+     color: black;
+    box-shadow: 0 0 20px gray;
+    transition: 1s;
+   
+}
+.info-box .Hobbies ul:hover{
+    animation: glow 1s infinite alternate-reverse;
+    color: gold;
+ }
+.info-box .Hobbies ul li{
+   list-style: square;
+}
+.info-box .language h2{    
+    color: black;
+    filter: drop-shadow(0 0 0.75rem gold);
+    cursor: default; 
+    margin: 20px;
+}
+.info-box .language ul{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+     color: black;
+    box-shadow: 0 0 20px gray;
+    transition: 1s;
+}
+.info-box .language ul:hover{
+    animation: glow 1s infinite alternate-reverse ;
+    color: gold;
+ }
+.info-box .language ul li{
+   list-style: square;
+}
+.info-box .future-plans h2{    
+    color: black;
+    filter: drop-shadow(0 0 0.75rem gold);
+    cursor: default; 
+    margin: 20px;
+    flex-wrap: wrap;
+}
+.info-box .future-plans ul{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+     color: black;
+    box-shadow: 0 0 20px gray;
+    transition: 1s;
+    flex-wrap: wrap;
+}
+.info-box .future-plans ul:hover{
+    animation: glow 1s infinite alternate-reverse ;
+    color: gold;
+ }
+.info-box .future-plans ul li{
+   list-style: square;
+}
+.info-box .fav-shows h2{    
+    color: black;
+    filter: drop-shadow(0 0 0.75rem gold);
+    cursor: default;
+    margin: 20px; 
+    flex-wrap: wrap;
+}
+.info-box .fav-shows ul{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+     color: black;
+    box-shadow: 0 0 20px gray;
+    transition: 1s;
+    flex-wrap: wrap;
+}
+.info-box .fav-shows ul:hover{
+    animation: glow 1s infinite alternate-reverse ;
+    color: gold;
+ }
+.info-box .fav-shows ul li{
+   list-style: square;
+}
+.form .contenu1 h2{
+      color: #000000;
+    filter: drop-shadow(0 0 20px gold);
+    cursor: default;
+    justify-content: center;
+    display: flex;
+}
+.form .contenu1 form{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+.form .contenu1 form input[type="text"]{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px gray;
+    background-color: gold;
+}
+.form .contenu1 form input[type="text"]:hover{
+    background-color: gray;
+    color: gold;
+    box-shadow: 0 0 20px gray;
+    animation: glow 1s infinite alternate;  
+}
+.form .contenu1 form input[type="email"]{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px gray;
+    background-color: gold;
+}
+.form .contenu1 form input[type="email"]:hover{
+    background-color: gray;
+    color: gold;
+    box-shadow: 0 0 20px gray;
+    animation: glow 1s infinite alternate;  
+}
+.form .contenu1 form textarea{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px gray;
+    background-color: gold;
+}
+.form .contenu1 form textarea:hover{
+    background-color: gray;
+    color: gold;
+    box-shadow: 0 0 20px gray;
+    animation: glow 1s infinite alternate;  
+}
+.form .contenu1 form input[type="submit"]{
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 20px gold;
+    border-radius: 20px;
+}
+.form .contenu1 form input[type="submit"]:hover{
+    background-color: gray;
+    color: gold;
+    box-shadow: 0 0 20px gray;
+    animation: glow 1s infinite alternate;
+}
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: black;
+    color: gold;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px gold;
+}
+

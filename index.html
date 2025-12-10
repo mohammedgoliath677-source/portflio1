@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+<body>
+    <h1 data-aos="flip-up">Home</h1>
+  <nav class="Navbars" data-aos="flip-up">
+    <ul class="links">
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="Box1">
+        <h2 data-aos="slide-up">Welcome to My Website</h2>
+        <p data-aos="slide-right">This is a simple webpage created as an example.<br>
+        Feel free to explore and learn more about me!<br>
+        Enjoy your stay!
+        </p>
+    </div>
+    <div class="info-box">
+        <div class="Hobbies" data-aos="fade-in" data-aos-delay="300">
+        <h2>My Hobbies</h2>
+        <ul>
+            <li data-aos="flip-up" data-aos-delay="300">Watching TVshows</li>
+            <li data-aos="flip-up" data-aos-delay="300">Coding</li>
+            <li data-aos="flip-up" data-aos-delay="300">Play Football</li>
+        </ul>
+        </div>
+        <div class="language"  data-aos="fade-in" data-aos-delay="300">
+        <h2>Programmation language</h2>
+        <ul>
+            <li data-aos="flip-up"data-aos-delay="300">HTML</li>
+            <li data-aos="flip-up"data-aos-delay="300">CSS</li>
+        </ul>
+        </div>
+        <div class="future-plans" data-aos="fade-in" data-aos-delay="300">
+        <h2>Future Plans</h2>
+        <ul>
+            <li data-aos="flip-up" data-aos-delay="300">Become a Frontback-end developer</li>
+            <li data-aos="flip-up" data-aos-delay="300">Learn Python/javascript</li>
+            <li data-aos="flip-up" data-aos-delay="300">Build my own portfolio</li>
+        </ul>
+        </div>
+        <div class="fav-shows" data-aos="fade-in" data-aos-delay="300">
+            <h2>Fav Shows</h2>
+            <ul>
+                <li data-aos="flip-up" data-aos-delay="300">Better call saul</li>
+                <li data-aos="flip-up" data-aos-delay="300">Mr robot</li>
+                <li data-aos="flip-up" data-aos-delay="300">Dexter</li>
+                <li data-aos="flip-up" data-aos-delay="300">Breaking bad</li>
+        </div>
+    </div>
+  </div>
+  <div class="form">
+          <div class="contenu1">
+           <h2 data-aos="fade-in">Contact Me</h2>
+          <form id="contactForm" data-aos="flip-up">
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <textarea name="message" placeholder="Your Message" required></textarea><br>
+            <input type="submit" value="Send Message">
+          </form>
+          </div>
+        </div>
+        <footer data-aos="slide-up">
+          <p>&copy; 2024 My Website. All rights reserved.</p>
+        </footer>
+
+        
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(
+    {
+      duration: 1200,
+      once:true
+    }
+  );
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    
+    let formData = new FormData(this);
+
+    
+    fetch("save.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(result => {
+        alert("Saved!"); 
+        document.getElementById("contactForm").reset(); 
+    });
+});
+</script>
+</body>
+</html>
